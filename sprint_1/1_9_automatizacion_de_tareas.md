@@ -6,6 +6,7 @@
 - [EJERCICIO 2](#ejercicio-2)
 - [EJERCICIO 3](#ejercicio-3)
 - [EJERCICIO 4](#ejercicio-4)
+- [EJERCICIO 5](#ejercicio-5)
 
 <!-- /TOC -->
 
@@ -203,6 +204,23 @@ https://github.com/Adalab/testing-Gulp
 
 Luego probamos a ejecutar la tarea por defecto `gulp` y la tarea `gulp watch`. Observamos el resultado en la carpeta CSS. Investigad un poco el código y probad a comentar cosas para averiguar qué hacen las 2 nuevas funcionalidades que hemos añadido.
 
+---
+
+#### EJERCICIO 2
+
+Vamos a trabajar con otro proyecto para ver la verdadera utilidad de gulp. En este caso, vamos a trabajar con ficheros HTML parciales, es decir, porciones de HTML que vamos a poder incrustar en otro HTML. De esta forma vamos a poder trabajar con ficheros más pequeños, por ejemplo, tener en un fichero la cabecera que podremos importar en todas las páginas de nuestra web.
+
+https://github.com/Adalab/testing-gulp-html-partials
+
+Probamos a ejecutar la tarea `gulp html`, que inserta los parciales en el HTML y deja el resultado en una nueva carpeta `docs`. También probad a ejecutar la tarea por defecto con `gulp`, que se queda observando los cambios en el HTML y los parciales para crear el HTML resultado en `docs`. Observamos el resultado en la carpeta `docs`. Investigad un poco el código y ahora vamos a probar a:
+
+- añadir contenido al fichero HTML principal y observar el resultado en `docs`
+- modificar los parciales del proyecto y observar el resultado en `docs`
+- identificar cómo podemos pasar información a los parciales a través de los atributos HTML
+- crear un nuevo parcial para el footer
+
+---
+
 ### Bueno, ¿y ahora?
 
 Ahora os hemos preparado un proyecto que os podéis descargar y donde integrar vuestros proyecto y ejercicios en Adalab:  
@@ -221,13 +239,13 @@ Tendremos tres carpetas (por defecto solo viene una en el kit):
 
 ---
 
-#### EJERCICIO 2
+#### EJERCICIO 3
 
 ¿Quién sabe decir qué hace la tarea **styles**?
 
 ---
 
-#### EJERCICIO 3
+#### EJERCICIO 4
 
 ¿Que diferencias hay entre la tarea **styles** y **styles-dist**?
 
@@ -253,16 +271,16 @@ Esta tarea se ejecuta una sola vez y no lanza servidores web ni watchers, pero g
 
 La forma más cómoda es:
 
-1. crear un repositorio en GitHub y clonarlo o partir de un repo existente ( como el de nuestro proyecto grupal)
+1. crear un repositorio en GitHub y clonarlo / partir de un repo existente (como el de nuestro proyecto grupal)
 2. descargar/clonar el kit a otra carpeta
 3. copiar o mover los archivos y carpetas a nuestro proyecto **SIN OLVIDAR EL ARCHIVO .GITIGNORE Y EL RESTO DE ARCHIVOS OCULTOS (empiezan por `.`)** (podemos obviar el `README.md` y la carpeta `.git`)
 4. Desde nuestro proyecto ya podemos ejecutar `npm install` para instalar las dependencias
-5. movemos el código de nuestro proyecto al lugar adecuado de la carpeta `_src`
+5. si partimos de un repo existente, movemos el código de nuestro proyecto al lugar adecuado de la carpeta `_src`
 6. arrancamos el proyecto con el comando `gulp` en la terminal
 
 ---
 
-#### EJERCICIO 4
+#### EJERCICIO 5
 
 Seguiremos los pasos anteriores para crear un nuevo proyecto usando el kit de Adalab. Después, en esta misma carpeta meteremos un ejercicio de la sesión de responsive para probar que se lanza el navegador que se actualiza solo con los cambios que hacemos en el HTML o CSS. Comprobad que la carpeta donde debemos meter el código de nuestro proyecto es **\_src**.
 
