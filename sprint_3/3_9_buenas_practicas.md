@@ -12,7 +12,7 @@
 
 ## Introducción
 
-Hemos visto ya las funcionalidad más básicas de la librería. En esta sesión nos centraremos en repasar lo ya visto e introducir buenas prácticas en el uso de React.
+Hemos visto ya las funcionalidades más básicas de la librería. En esta sesión nos centraremos en repasar lo ya visto e introducir buenas prácticas en el uso de React.
 
 ## ¿Para qué sirve lo que vamos a ver en esta sesión?
 
@@ -20,7 +20,7 @@ Para poder escribir un código de React más legible y usando el "React way", es
 
 ## Uso de expresiones y programación funcional
 
-Como ya sabemos, en React podemos mezclar código de JSX (nuestro HTML en JS) y código JavaScript metiéndolo entre llaves `{ }`. Pero el código que metemos entre lleves desde ser una expresión, es decir, un trozo de código que devuelve un resultado. Por eso, por ejemplo, no podemos meter código con `if`/`else` o hacer un `for`. Si necesitamos hacerlo, debemos llevarnos ese código a una nueva función (o método) y ejecutarla entre las llaves `{miFucn()}` ya que ejecutar una función sí es una expresión.
+Como ya sabemos, en React podemos mezclar código de JSX (nuestro HTML en JS) y código JavaScript metiéndolo entre llaves `{ }`. Pero el código que metemos entre llaves debe ser una expresión, es decir, un trozo de código que devuelve un resultado. Por eso, por ejemplo, no podemos meter código con `if`/`else` o hacer un `for` en JSX. Si necesitamos hacerlo, debemos llevarnos ese código a una nueva función (o método) y ejecutarla entre las llaves `{miFucn()}` ya que ejecutar una función sí es una expresión.
 
 Debido a esto, el código de React que escriben los desarrolladores tiende a constar de expresiones y usar patrones como en encadenamiento (_chaining_), por ejemplo, usando métodos funcionales de array para manejar listados en lugar de bucles. El encadenamiento consiste en operar sobre el resultado de una expresión encadenando otra acción mediante el operador punto `.`. Vamos a ver un ejemplo de esto que ya lo hemos estado usando:
 
@@ -44,7 +44,7 @@ En este ejemplo, partimos de un conjunto de números, sobre los que queremos rea
 
 **Numeritos**
 
-Vamos a crear una aplicación de React que, dado un listado de números como el del ejemplo anterior, los pinta en pantalla (usaremos un `ul` y sus `li`s ¡por supuesto!). Para pintarlos vamos a usar la función `map` para pasar de un listado de números a un listado de elementos de JSX.
+Vamos a crear una aplicación de React que, dado un listado de números como el del ejemplo anterior, los pinta en pantalla (usaremos un `ul` y sus `li`s ¡por supuesto!). Para pintarlos vamos a usar la función `.map` para pasar de un listado de números a un listado de elementos de JSX.
 
 a) Vamos a añadir un formulario a la página, que contiene un input donde podemos introducir un número. Si ponemos, por ejemplo un 6, se mostrarán en pantalla solo los números mayores de 6. Usaremos `filter` y el patrón _chaining_ para conseguirlo.
 
@@ -70,11 +70,11 @@ return isEditMode ? (
 );
 ```
 
-Esto suele usarse mucho para mostrar elementos de _loading_ (_loaders_) miestras, por ejemplo, se carga información del servidor.
+Esto suele usarse mucho para mostrar elementos de _loading_ (_loaders_) mientras, por ejemplo, se carga información del servidor.
 
 ### Comprobaciones y valores por defecto
 
-Muchas veces vamos a querer hacer comporbaciones antes de pintar cosas en pantalla, por ejemplo, de que una variable o sus claves no sean nulas. Lo haremos usando el operador `&&` ya que las condiciones se ejecutan en orden desde la primera y si alguna es falsa dejan de ejecutarse. Por ejemplo, aquí comprobamos primero que `data` no sea null, luego que tenga una clave `name` que no sea nula y si ambas se cumplen pinta el contenido en pantalla. Si no se cumplen, no se pintará nada.
+Muchas veces vamos a querer hacer comprobaciones antes de pintar cosas en pantalla, por ejemplo, que una variable o sus claves no sean nulas. Lo haremos usando el operador `&&` ya que las condiciones se ejecutan en orden desde la primera y si alguna es falsa dejan de ejecutarse. Por ejemplo, aquí comprobamos primero que `data` no sea null, luego que tenga una clave `name` que no sea nula y si ambas se cumplen pinta el contenido en pantalla. Si no se cumplen, no se pintará nada.
 
 ```js
 return data && data.name && <p>Bienvenido, {data.name}</p>;
@@ -148,7 +148,7 @@ return (
 
 a) Para terminar, vamos a repasar los ejercicios anteriores y comprobar que no tenemos errores en la consola debidos a la ausencia de keys.
 
-b) En el ejercicio anterior vamos a extraer un nuevo componente llamado `ColapsiblePlette`. ¿Dónde hay que poner el `key` ahora?
+b) En el ejercicio anterior vamos a extraer un nuevo componente llamado `ColapsiblePalette`. ¿Dónde hay que poner el `key` ahora?
 
 ---
 
